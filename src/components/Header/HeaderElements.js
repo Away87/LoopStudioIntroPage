@@ -1,11 +1,12 @@
 import styled from "styled-components"
-import BackgroundImg from "../../images/mobile/image-hero.jpg"
+import MobileBackgroundImg from "../../images/mobile/image-hero.jpg"
+import DesktopBackgroundImg from "../../images/desktop/image-hero.jpg"
 
 export const Container = styled.header`
     height: 100vh;
     border: 2px solid red;
 
-    background-image: url(${BackgroundImg});
+    background-image: url(${MobileBackgroundImg});
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -15,6 +16,7 @@ export const Container = styled.header`
     align-items: center;
 
     @media screen and (min-width:50em) {
+        background-image: url(${DesktopBackgroundImg});
         justify-content: flex-start;
     }
 `   

@@ -84,6 +84,7 @@ export const Links = styled.ul`
     transform: translateY(-50%);
     line-height: 2.5em;
     margin-top: 0;
+
     @media screen and (min-width:50em){
         display: flex;
         justify-content: space-evenly;
@@ -101,13 +102,12 @@ export const LinksLi = styled.li`
 
     font-family: var(--ff-josefin);
     text-transform: uppercase;
-    font-size: var(--fs-s);
-    font-weight: lighter;
+    font-size: var(--fs-m);
 
     @media screen and (min-width:50em){
         font-family: var(--ff-alata);
         text-transform: capitalize;
-        font-weight: lighter;
+        font-size: var(--fs-s);
 
         &:hover::after{
             content: "";

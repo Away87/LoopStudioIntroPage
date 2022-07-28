@@ -1,4 +1,5 @@
 import React,{useState, useEffect} from 'react'
+import { useInterval } from 'usehooks-ts'
 
 import {
     NavbarContainer,
@@ -14,10 +15,10 @@ import logo from "../../images/logo.svg"
 const Navbar = () => {
   // To Toggle Mobile Navbar
   const [MobileNavbarState, setMobileNavbarState] = useState(false)
-  
-  useEffect(()=>{
 
-  },[MobileNavbarState])
+  useInterval(()=> window.innerWidth > 800 ? setMobileNavbarState(false) : setMobileNavbarState(true), 
+  MobileNavbarState
+  )
 
   return (
     <>
