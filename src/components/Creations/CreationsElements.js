@@ -1,6 +1,20 @@
 import styled from "styled-components"
 
-export const Container = styled.div``
+export const Container = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+    @media screen and (min-width:50em){
+        header {
+            /* border: 2px solid green; */
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+`
 
 export const Heading = styled.h1`
     font-family: var(--ff-josefin);
@@ -15,6 +29,7 @@ export const Container2 = styled.div`
         display: grid;
         gap: 2em;
         cursor: pointer;
+        margin-bottom: 5em;
 
     @media screen and (min-width:50em) {
         grid-template-columns: repeat(4, 1fr);
@@ -24,9 +39,15 @@ export const Container2 = styled.div`
 export const CardContainer = styled.div`
     position: relative;
 
-    &:hover{
-        transform: scale(1.1);
-        transition: transform 0.2s ease-in;
+    &:hover > picture {
+        background: none;
+        opacity: 0.5;
+        transition: opacity 200ms ease-in;
+    }
+
+    &:hover > h1 {
+        color: var(--clr-black);
+        transition: all 200ms ease-in;
     }
 `
 export const Picture = styled.picture`
@@ -51,6 +72,7 @@ export const Picture = styled.picture`
         }
     }
 
+
 `
 export const Text = styled.h1`
     color: var(--clr-white);
@@ -69,5 +91,26 @@ export const Text = styled.h1`
     @media screen and (min-width: 50em) {
         font-size: var(--fs-sm);
         width: 100%;
+    }
+`
+
+export const Button = styled.button`
+    width: 60%;
+    height: 3em;
+
+    background: none;
+    border: 2px solid black;
+    font-size: var(--fs-s);
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+    word-spacing: 0.5em;
+
+    max-width: 15em;
+    cursor: pointer;
+
+    &:hover {
+        background-color: var(--clr-black);
+        color: var(--clr-white);
+        transition: all 200ms ease-in;
     }
 `

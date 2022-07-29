@@ -1,11 +1,13 @@
-import React,{useEffect} from 'react'
+import React,{useEffect, useState} from 'react'
+import { useInterval } from 'usehooks-ts'
 import { 
     Container,
     Heading,
     Container2,
     CardContainer,
     Picture,
-    Text
+    Text,
+    Button
 } from './CreationsElements'
 
 import { Cards } from './cards'
@@ -35,14 +37,24 @@ const Card = (val, key) => {
 }
 
 const Creations = () => {
+    const [MobileSize, setMobileSize] = useState(undefined)
+    useInterval(()=>{
+        window.innerWidth > 800 ? setMobileSize(false) : setMobileSize(true)
+    }, 100)
+
   return (
     <>
     <Container>
-        <Heading>our creations</Heading>
+        <header>
+            <Heading>our creations</Heading>
+            {MobileSize ? null : <Button>see all</Button>}
+        </header>
 
         <Container2>
             {Cards.map(Card)}
         </Container2>
+
+        {MobileSize && <Button>see all</Button>}
 
     </Container>
     </>
