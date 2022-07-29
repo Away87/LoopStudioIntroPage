@@ -20,6 +20,17 @@ const Navbar = () => {
   MobileNavbarState
   )
 
+  useEffect(()=>{
+    const pageYoffset = window.pageYoffset
+    const pageXoffset = window.pageXoffset
+
+    window.onscroll = ()=>{
+      if (MobileNavbarState){
+        window.scrollTo(pageXoffset, pageYoffset);
+      }
+    };
+  }, [MobileNavbarState])
+
   return (
     <>
     <NavbarContainer isActive={MobileNavbarState}>
