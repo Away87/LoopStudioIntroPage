@@ -3,6 +3,7 @@ import { GlobalStyled } from "./GlobalStyled";
 
 import Header from "./components/Header";
 import About from "./components/About";
+import Creations from "./components/Creations";
 
 
 const App = () => {
@@ -12,6 +13,7 @@ const App = () => {
     <Header/>
     <main>
       <About/>
+      <Creations/>
     </main>
     </>
   )
