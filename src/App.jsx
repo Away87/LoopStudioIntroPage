@@ -4,6 +4,7 @@ import { GlobalStyled } from "./GlobalStyled";
 import Header from "./components/Header";
 import About from "./components/About";
 import Creations from "./components/Creations";
+import Footer from "./components/Footer";
 
 
 const App = () => {
@@ -15,6 +16,9 @@ const App = () => {
       <About/>
       <Creations/>
     </main>
+    <footer>
+      <Footer/>
+    </footer>
     </>
   )
 }

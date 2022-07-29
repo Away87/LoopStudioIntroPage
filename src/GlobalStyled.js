@@ -101,7 +101,6 @@ export const GlobalStyled = createGlobalStyle`
     main {
         width: 80%;
         margin: 0 auto;
-        margin-bottom: 50em;
         display: grid;
         gap: 5em;
     }
