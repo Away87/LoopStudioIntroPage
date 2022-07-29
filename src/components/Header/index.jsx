@@ -1,5 +1,4 @@
 import React from 'react'
-import { useInterval } from 'usehooks-ts'
 import Navbar from '../Navbar'
 import {
     Container,

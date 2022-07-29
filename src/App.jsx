@@ -2,6 +2,7 @@ import React from "react";
 import { GlobalStyled } from "./GlobalStyled";
 
 import Header from "./components/Header";
+import About from "./components/About";
 
 
 const App = () => {
@@ -9,6 +10,9 @@ const App = () => {
     <>
     <GlobalStyled />
     <Header/>
+    <main>
+      <About/>
+    </main>
     </>
   )
 }

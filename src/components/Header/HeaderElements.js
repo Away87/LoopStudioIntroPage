@@ -4,7 +4,6 @@ import DesktopBackgroundImg from "../../images/desktop/image-hero.jpg"
 
 export const Container = styled.header`
     height: 100vh;
-    border: 2px solid red;
 
     background-image: url(${MobileBackgroundImg});
     background-position: center;
@@ -26,6 +25,7 @@ export const Heading = styled.h1`
     font-family: var(--ff-josefin);
     font-weight: lighter;
     font-size: var(--fs-m);
+    color: var(--clr-white);
 
     outline: 2px solid white;
     padding: 0.5em;

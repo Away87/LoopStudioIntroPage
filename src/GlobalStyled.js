@@ -58,7 +58,8 @@ export const GlobalStyled = createGlobalStyle`
         --fs-l: clamp(4rem, 1vw + 0.05rem, 8rem); */
 
         --fs-l: clamp(3.5rem, 1vw + 0.05rem, 8rem);
-        --fs-m: clamp(2.5rem, 5vw + 0.05rem, 4rem);
+        --fs-m: clamp(1.7rem, 5vw + 0.05rem, 4rem);
+        --fs-sm: clamp(1rem, 3vw + 0.05rem, 3rem);
         --fs-s: clamp(1rem, 1vw + 0.05rem, 6rem);
         --fs-xs: clamp(0.9rem, 1vw + 0.05rem, 0.9rem);
 
@@ -72,7 +73,7 @@ export const GlobalStyled = createGlobalStyle`
     }
 
     body {
-        color: var(--clr-white);
+        color: var(--clr-black);
     }
 
     *,
@@ -95,6 +96,14 @@ export const GlobalStyled = createGlobalStyle`
     a{
         color: inherit;
         text-decoration: none;
+    }
+
+    main {
+        width: 80%;
+        margin: 0 auto;
+        margin-bottom: 50em;
+        display: grid;
+        gap: 5em;
     }
 
     /* Global Css ends */

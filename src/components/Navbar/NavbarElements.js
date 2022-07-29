@@ -103,6 +103,7 @@ export const LinksLi = styled.li`
     font-family: var(--ff-josefin);
     text-transform: uppercase;
     font-size: var(--fs-m);
+    color: var(--clr-white);
 
     @media screen and (min-width:50em){
         font-family: var(--ff-alata);
