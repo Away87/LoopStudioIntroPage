@@ -3,17 +3,27 @@ import MobileBackgroundImg from "../../images/mobile/image-hero.jpg"
 import DesktopBackgroundImg from "../../images/desktop/image-hero.jpg"
 
 export const Container = styled.header`
-    height: 100vh;
-
-    background-image: url(${MobileBackgroundImg});
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-
+    height: 35em;
+    position: relative;
+    
     display: flex;
     justify-content: center;
     align-items: center;
+    
+    &::before{
+        content:"";
+        display: block;
+        position: absolute;
+        top: 0%;
+        right: 0;
+        left: 0;
+        bottom: 0;
 
+        background-image: url(${MobileBackgroundImg});
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
     @media screen and (min-width:50em) {
         background-image: url(${DesktopBackgroundImg});
         justify-content: flex-start;
@@ -34,6 +44,8 @@ export const Heading = styled.h1`
     width: 90%;
     min-width: 7.5em;
     max-width: 10em;
+    margin-top: 3em;
+    position: relative;
 
     span {
             font-family: var(--ff-josefin);

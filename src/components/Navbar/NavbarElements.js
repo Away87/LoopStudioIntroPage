@@ -18,7 +18,7 @@ export const NavbarContainer = styled.nav`
     background-color: ${props => props.isActive ? "var(--clr-black)" : "transparent"};
     height: ${props => props.isActive ? "100vh" : "5em"};
     position: absolute;
-    top:0;
+    top:8%;
     left:0;
     right: 0;
     display: flex;

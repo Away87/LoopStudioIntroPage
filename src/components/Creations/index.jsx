@@ -14,7 +14,7 @@ import { Cards } from './cards'
 
 const Card = (val, key) => {
     useEffect(() => {
-        const text = document.querySelectorAll("#text")
+        const text = document.querySelectorAll(".text")
         text.forEach(element=>{
             const textWords = element.textContent.split(" ")
             if (textWords.length === 2) {
@@ -30,7 +30,7 @@ const Card = (val, key) => {
                 <source srcSet={val.DesktopImage} alt={val.text} media="(min-width:50em) " />
                 <img src={val.Mobileimage} alt={val.text}/>
             </Picture>
-            <Text id='text'>{val.text}</Text>
+            <Text className='text'>{val.text}</Text>
         </CardContainer>
     </>
   )
