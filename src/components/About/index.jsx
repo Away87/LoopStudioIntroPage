@@ -15,7 +15,6 @@ const About = () => {
     <>
     <Container>
         <Picture>
-            {/* <source srcSet={DesktopImg} alt="A man with VR" media="(min-width:45em)"/> */}
             <img src={MobileImg} alt="A man with VR"/>
         </Picture>
         <TextArea>

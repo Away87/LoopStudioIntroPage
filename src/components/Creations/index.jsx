@@ -27,7 +27,7 @@ const Card = (val, key) => {
     <>
         <CardContainer>
             <Picture>
-                <source srcSet={val.DesktopImage} alt={val.text} media="(min-width:50em) " />
+                <source srcSet={val.DesktopImage} media="(min-width:50em) " />
                 <img src={val.Mobileimage} alt={val.text}/>
             </Picture>
             <Text className='text'>{val.text}</Text>
